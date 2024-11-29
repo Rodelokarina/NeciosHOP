@@ -1,0 +1,182 @@
+[
+    {
+        "id": "abrigo-01",
+        "titulo": "Chaqueta de Algodón",
+        "imagen": "./img/abrigos/01.jpg",
+        "categoria": {
+            "nombre": "Abrigos",
+            "id": "abrigos"
+        },
+        "precio": 1000,
+        "descripcion": "Chaqueta clásica confeccionada en algodón suave, ideal para días fríos y de uso diario. Su diseño versátil la hace imprescindible en tu armario.",
+        "tallas": ["S", "M", "L", "XL"]
+    },
+    {
+        "id": "abrigo-02",
+        "titulo": "Abrigo Moderno",
+        "imagen": "./img/abrigos/02.jpg",
+        "categoria": {
+            "nombre": "Abrigos",
+            "id": "abrigos"
+        },
+        "precio": 1000,
+        "descripcion": "Abrigo contemporáneo con un corte sutil y materiales de alta calidad. Diseñado para quienes buscan estilo y confort en una sola prenda.",
+        "tallas": ["S", "M", "L", "XL"]
+    },
+    {
+        "id": "abrigo-03",
+        "titulo": "Abrigo Elegante",
+        "imagen": "./img/abrigos/03.jpg",
+        "categoria": {
+            "nombre": "Abrigos",
+            "id": "abrigos"
+        },
+        "precio": 1000,
+        "descripcion": "Abrigo elegante con un diseño clásico y moderno a la vez. Ideal para complementar cualquier atuendo con un toque sofisticado.",
+        "tallas": ["S", "M", "L", "XL"]
+    },
+    {
+        "id": "abrigo-04",
+        "titulo": "Chaqueta de Algodón Negra",
+        "imagen": "./img/abrigos/04.jpg",
+        "categoria": {
+            "nombre": "Abrigos",
+            "id": "abrigos"
+        },
+        "precio": 1000,
+        "descripcion": "Chaqueta confeccionada en algodón negro de alta calidad. Perfecta para climas frescos y fácil de combinar con cualquier estilo.",
+        "tallas": ["S", "M", "L", "XL"]
+    },
+    {
+        "id": "abrigo-05",
+        "titulo": "Buso Negro",
+        "imagen": "./img/abrigos/05.jpg",
+        "categoria": {
+            "nombre": "Abrigos",
+            "id": "abrigos"
+        },
+        "precio": 1000,
+        "descripcion": "Buso ligero y cómodo, diseñado para el uso diario. Su estilo sencillo lo convierte en una prenda esencial para tu rutina.",
+        "tallas": ["S", "M", "L", "XL"]
+    },
+    {
+        "id": "camiseta-01",
+        "titulo": "Camiseta Básica",
+        "imagen": "./img/camisetas/01.jpg",
+        "categoria": {
+            "nombre": "Camisetas",
+            "id": "camisetas"
+        },
+        "precio": 1000,
+        "descripcion": "Camiseta básica hecha en algodón suave, perfecta para el uso diario. Disponible en colores clásicos para combinar con cualquier atuendo.",
+        "tallas": ["S", "M", "L", "XL"]
+    },
+    {
+        "id": "camiseta-02",
+        "titulo": "Camiseta de Verano",
+        "imagen": "./img/camisetas/02.jpg",
+        "categoria": {
+            "nombre": "Camisetas",
+            "id": "camisetas"
+        },
+        "precio": 1000,
+        "descripcion": "Camiseta fresca y ligera, perfecta para días cálidos. Disponible en múltiples colores para que encuentres tu estilo ideal.",
+        "tallas": ["S", "M", "L", "XL"]
+    },
+    {
+        "id": "camiseta-03",
+        "titulo": "Camiseta Casual",
+        "imagen": "./img/camisetas/03.jpg",
+        "categoria": {
+            "nombre": "Camisetas",
+            "id": "camisetas"
+        },
+        "precio": 1000,
+        "descripcion": "Camiseta casual con un diseño moderno y un ajuste perfecto. Ideal para ocasiones relajadas o salidas informales.",
+        "tallas": ["S", "M", "L", "XL"]
+        
+    },
+    {
+        "id": "camiseta-04",
+        "titulo": "Camiseta Ligera",
+        "imagen": "./img/camisetas/04.jpg",
+        "categoria": {
+            "nombre": "Camisetas",
+            "id": "camisetas"
+        },
+        "precio": 1000,
+        "descripcion": "Camiseta de tejido ligero y transpirable. Diseñada para máxima comodidad durante todo el día."
+    },
+    {
+        "id": "camiseta-05",
+        "titulo": "Camiseta Casual",
+        "imagen": "./img/camisetas/05.jpg",
+        "categoria": {
+            "nombre": "Camisetas",
+            "id": "camisetas"
+        },
+        "precio": 1000,
+        "descripcion": "Camiseta casual con diseño versátil y ajuste cómodo. Perfecta para complementar tus looks diarios."
+    },
+
+
+    {
+        "id": "pantalon-01",
+        "titulo": "Pantalón  clásico",
+        "imagen": "./img/pantalones/01.jpg",
+        "categoria": {
+            "nombre": "Pantalones",
+            "id": "pantalones"
+        },
+        "precio": 1000,
+      "descripcion": "Un pantalón clásico de diseño atemporal, confeccionado con materiales resistentes y cómodos. Perfecto para el día a día o eventos casuales."
+    },
+    {
+        "id": "pantalon-02",
+        "titulo": "Pantalón Clásico Multicolor",
+        "imagen": "./img/pantalones/02.jpg",
+        "categoria": {
+            "nombre": "Pantalones",
+            "id": "pantalones"
+        },
+        "precio": 1000,
+       "descripcion": "Pantalón clásico y versátil, diseñado para máxima comodidad y durabilidad. ¡Disponible en una amplia gama de colores para que combines como quieras!",
+       "tallas": ["S", "M", "L", "XL"]
+    },
+    {
+        "id": "pantalon-03",
+        "titulo": "Pantalón Drill",
+        "imagen": "./img/pantalones/03.jpg",
+        "categoria": {
+            "nombre": "Pantalones",
+            "id": "pantalones"
+        },
+        "precio": 1000,
+      "descripcion": "Pantalón de tela elástica, ideal para cualquier ocasión. Combina estilo y confort en un diseño moderno y funcional.",
+      "tallas": ["S", "M", "L", "XL"]
+    },
+    {
+        "id": "pantalon-04",
+        "titulo": "Pantalón elegante",
+        "imagen": "./img/pantalones/04.jpg",
+        "categoria": {
+            "nombre": "Pantalones",
+            "id": "pantalones"
+        },
+        "precio": 1000,
+       "descripcion": "Ligero y sofisticado, este pantalón es la elección perfecta para ocasiones especiales o eventos formales. Combínalo con tu mejor camisa.",
+       "tallas": ["S", "M", "L", "XL"]
+    },
+    {
+        "id": "pantalon-05",
+        "titulo": "Pantalón ",
+        "imagen": "./img/pantalones/05.jpg",
+        "categoria": {
+            "nombre": "Pantalones",
+            "id": "pantalones"
+        },
+        "precio": 1000,
+      "descripcion": "Este pantalón ajustado realza tu figura con un diseño moderno y elegante. Ideal para lucir impecable en cualquier lugar.",
+      "tallas": ["S", "M", "L", "XL"]
+    }
+]

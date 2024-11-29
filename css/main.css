@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --clr-main: #4a2c91;  /* Color principal más sofisticado */
+    --clr-main-light: #9b6fe2;  /* Color secundario suave */
+    --clr-white: #ffffff;
+    --clr-gray-light: #f4f4f4;  /* Color gris claro para fondos */
+    --clr-gray: #dcdcdc;  /* Gris neutro para bordes */
+    --clr-red: #e74c3c;  /* Rojo más suave para advertencias */
+    --clr-shadow: rgba(0, 0, 0, 0.1);  /* Sombra suave para profundidad */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+h1, h2, h3, h4, h5, h6, p, a, input, textarea, ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: var(--clr-main);
+    min-height: 100vh;
+    box-shadow: 0 4px 8px var(--clr-shadow);
+}
+
+aside {
+    padding: 2rem;
+    padding-right: 0;
+    color: var(--clr-white);
+    position: sticky;
+    top: 0; /* Fijamos el menú lateral en la parte superior */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Cambié esto de 'space-between' para mantener los elementos en orden */
+    box-shadow: 2px 0 6px var(--clr-shadow);
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--clr-white);
+    position: relative; /* Evitamos que el logo se mueva con el contenido */
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.boton-menu {
+    background-color: transparent;
+    border: 0;
+    color: var(--clr-white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.boton-menu:hover {
+    background-color: var(--clr-main-light);
+    border-radius: 0.5rem;
+    transform: translateX(5px);
+}
+
+.boton-menu.active {
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    position: relative;
+}
+
+.boton-menu.active::before {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    bottom: 100%;
+    right: 0;
+    background-color: transparent;
+    border-bottom-right-radius: .5rem;
+    box-shadow: 0 1rem 0 var(--clr-white);
+}
+
+.boton-menu.active::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    top: 100%;
+    right: 0;
+    background-color: transparent;
+    border-top-right-radius: .5rem;
+    box-shadow: 0 -1rem 0 var(--clr-white);
+}
+
+.boton-carrito {
+    margin-top: 2rem;
+}
+
+.numerito {
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    padding: .2rem .3rem;
+    border-radius: .25rem;
+    font-weight: 600;
+}
+
+.boton-carrito.active .numerito {
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+   
+}
+
+.texto-footer {
+    color: var(--clr-main-light);
+    font-size: .85rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    background-color: var(--clr-white);
+    margin: 1rem;
+    margin-left: 0;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    box-shadow: 0 4px 12px var(--clr-shadow);
+}
+
+.titulo-principal {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 800;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #e863ec, #371ca3); /* Gradiente */
+    -webkit-background-clip: text; /* Hacer que el gradiente afecte solo al texto */
+    color: transparent; /* El texto se vuelve transparente para mostrar el gradiente */
+
+ 
+}
+
+
+
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.producto-imagen {
+    max-width: 100%;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.producto-imagen:hover {
+    transform: scale(1.05);
+}
+
+.producto-detalles {
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+    padding: .75rem;
+    border-radius: 1rem;
+    margin-top: -2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    box-shadow: 0 4px 8px var(--clr-shadow);
+}
+
+.producto-titulo {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.producto-agregar {
+    border: 0;
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    padding: .5rem;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    cursor: pointer;
+    border: 2px solid var(--clr-white);
+    transition: background-color .2s, color .2s;
+    font-weight: 500;
+}
+
+.producto-agregar:hover {
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+}
+
+/** CARRITO **/
+
+.contenedor-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.carrito-vacio,
+.carrito-comprado {
+    color: var(--clr-main);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.carrito-productos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.carrito-producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr-gray-light);
+    color: var(--clr-main);
+    padding: 1rem;
+    padding-right: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 6px var(--clr-shadow);
+}
+
+.carrito-producto-imagen {
+    width: 4rem;
+    border-radius: .5rem;
+    box-shadow: 0 1px 3px var(--clr-shadow);
+}
+
+.carrito-producto small {
+    font-size: .85rem;
+    color: var(--clr-gray);
+}
+
+.carrito-producto-eliminar {
+    border: 0;
+    background-color: transparent;
+    color: var(--clr-red);
+    cursor: pointer;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.carrito-producto-eliminar:hover {
+    color: var(--clr-main);
+}
+
+.carrito-acciones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.carrito-acciones-vaciar {
+    border: 0;
+    background-color: var(--clr-gray-light);
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--clr-main);
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.carrito-acciones-vaciar:hover {
+    background-color: var(--clr-main-light);
+}
+
+.carrito-acciones-total {
+    display: flex;
+    background-color: var(--clr-gray-light);
+    padding: 1rem;
+    color: var(--clr-main);
+    text-transform: uppercase;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    gap: 1rem;
+}
+
+.carrito-acciones-comprar {
+    border: 0;
+    background-color: var(--clr-main);
+    padding: 1rem;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.carrito-acciones-comprar:hover {
+    background-color: #372180;  /* Un tono más oscuro para el hover */
+}
+
+/* MOBILE HEADER */
+.header-mobile {
+    display: none;
+}
+
+.close-menu {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--clr-white);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.disabled {
+    display: none;
+}
+
+/*** MEDIA QUERIES ***/
+
+@media screen and (max-width: 850px) {
+    .contenedor-productos {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .header-mobile {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        background-color: var(--clr-main);
+        color: var(--clr-white);
+        text-align: center;
+    }
+
+    .close-menu {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--clr-white);
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .boton-menu {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+}
+/* Estilos para el ícono de WhatsApp */
+.whatsapp-icon {
+    width: 20px;  /* Ajusta el tamaño a lo que necesites */
+    height: auto;  /* Mantiene la proporción de la imagen */
+    margin-right: 0.5rem; /* Espacio entre la imagen y el texto */
+    vertical-align: middle; /* Alinea la imagen verticalmente con el texto */
+}
+.carrito-acciones-comprar {
+    border: 0;
+    background-color: var(--clr-main);
+    padding: 1rem;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;  /* Alinea el texto y la imagen horizontalmente */
+    justify-content: center;  /* Centra el contenido */
+    gap: 0.5rem; /* Espacio entre la imagen y el texto */
+    transition: background-color 0.2s ease;
+}
+
+.carrito-acciones-comprar:hover {
+    background-color: #372180;  /* Un tono más oscuro para el hover */
+}
+/* MEDIA QUERIES */
+
+/* En pantallas pequeñas (menos de 850px) */
+@media screen and (max-width: 850px) {
+    .contenedor-productos {
+        grid-template-columns: 1fr 1fr 1fr;  /* 3 columnas en lugar de 4 */
+    }
+}
+
+/* En pantallas más pequeñas (menos de 600px) */
+@media screen and (max-width: 600px) {
+    .wrapper {
+        grid-template-columns: 1fr;  /* Una sola columna para el layout */
+    }
+
+    /* Menú oculto en pantallas pequeñas */
+    .menu {
+        display: none;
+    }
+
+    /* Mostrar un header en móviles */
+    .header-mobile {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        background-color: var(--clr-main);
+        color: var(--clr-white);
+        text-align: center;
+    }
+
+    /* Botón de cerrar menú en móviles */
+    .close-menu {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--clr-white);
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    /* Hacer más grande el tamaño del botón de menú en móviles */
+    .boton-menu {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+
+    /* Ajustar el tamaño de la fuente y el espaciado en la cabecera */
+    .titulo-principal {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Ajuste en las columnas de productos (2 columnas en lugar de 4) */
+    .contenedor-productos {
+        grid-template-columns: 1fr 1fr;  /* 2 columnas en lugar de 4 */
+    }
+
+    /* Reducir tamaño de imagen de los productos en móviles */
+    .producto-imagen {
+        max-width: 90%;
+    }
+
+    /* Ajustar botones en el carrito */
+    .carrito-acciones-comprar {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+        gap: 0.3rem;
+    }
+
+    /* Ajustar el tamaño de íconos */
+    .whatsapp-icon {
+        width: 15px;  /* Ajustar tamaño para pantallas más pequeñas */
+        margin-right: 0.3rem;  /* Ajustar margen entre el ícono y el texto */
+    }
+}
+
+/* Para pantallas muy pequeñas (menos de 400px) */
+@media screen and (max-width: 400px) {
+    /* Reducir más los tamaños de los íconos */
+    .whatsapp-icon {
+        width: 12px;  /* Tamaño más pequeño para dispositivos muy pequeños */
+    }
+
+    /* Reducir más el tamaño del botón de compra */
+    .carrito-acciones-comprar {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    .wrapper {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+    }
+
+    aside {
+        position: relative; /* Cambia el sticky por relativo para evitar que se quede fijo */
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    footer {
+        margin-top: 1.5rem; /* Añade espacio entre el contenido y el footer */
+    }
+
+
+}
+/* Inicialmente ocultar las descripciones */
+.producto-descripcion.ocultar {
+    display: none;
+}
+
+/* Estilo del botón (opcional) */
+.mostrar-descripcion {
+    background-color: #4b33a8;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.mostrar-descripcion:hover {
+    background-color: #785ce9;
+}
+
+/* Estilos para pantallas más pequeñas (menores a 850px) */
+@media screen and (max-width: 850px) {
+    .wrapper {
+        grid-template-columns: 1fr; /* Pone todo en una sola columna */
+    }
+
+    aside {
+        position: relative;  /* Cambia a posición relativa para evitar que quede fijo */
+        height: auto;  /* Elimina el 100vh para que no ocupe toda la pantalla */
+        padding: 1rem;  /* Ajusta el relleno */
+        box-shadow: none;  /* Opcional: elimina la sombra si lo prefieres */
+    }
+
+    .menu {
+        flex-direction: row; /* Hace que los elementos del menú se acomoden en fila */
+        gap: 0.5rem;  /* Ajusta el espacio entre los elementos */
+    }
+
+    .logo {
+        font-size: 1.2rem; /* Ajusta el tamaño del logo */
+    }
+
+    .boton-menu {
+        padding: 0.8rem 1rem; /* Ajusta el tamaño de los botones */
+    }
+}
+
+/* Estilos para pantallas muy pequeñas (menos de 600px) */
+@media screen and (max-width: 600px) {
+    .wrapper {
+        grid-template-columns: 1fr; /* Mantén el layout de una sola columna */
+    }
+
+    aside {
+        position: relative;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .menu {
+        display: block;  /* Asegura que el menú se muestre como bloque */
+        gap: 1rem;  /* Ajusta el espacio entre los elementos */
+    }
+
+    .header-mobile {
+        display: block;  /* Muestra el menú móvil */
+    }
+
+    .close-menu {
+        font-size: 1.5rem;
+        color: var(--clr-white);
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .boton-menu {
+        font-size: 1.2rem; /* Ajusta el tamaño de los botones */
+        padding: 0.8rem;
+    }
+}
